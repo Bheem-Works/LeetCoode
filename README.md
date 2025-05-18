@@ -1,2 +1,2 @@
 # LeetCoode
-This File contians javaScript aleetcode probles
+This File contians javaScript LeetCode Problems & Solutions of it. 
