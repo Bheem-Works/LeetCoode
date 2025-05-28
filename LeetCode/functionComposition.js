@@ -16,3 +16,17 @@ var compose = function(functions) {
   const fn = compose([x => x + 1, x => 2 * x])
   console.log(fn(2)); // 9
 
+  // once again 
+
+  var composeFunction = function(functions){
+    return function(x) {
+        for(const fn of functions.reverse()){
+            x = fn(x);
+            console.log('x',x);
+        }
+        return x;
+    }
+  }
+
+  const lfn = composeFunction([x => x + 1, x => 2 *x]);
+  console.log(lfn(3)); 
