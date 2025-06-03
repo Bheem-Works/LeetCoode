@@ -3,9 +3,14 @@
  * @return {Function}
  */
 function memoize(fn) {
-    
+   const cache = {}; 
     return function(...args) {
-        
+        const key = JSON.Stringify(args);
+        if(key in cache){
+            return cache[key];
+        }
+        cache[key] = fn(...args);
+        return cache[key];
     }
 }
 
